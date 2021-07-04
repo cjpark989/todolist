@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class = "container">
+    <h1>Task Manager App</h1>
+
+    <table border:1>
+        <tr>
+            <th>Task ID</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in fuck %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.content }}</td>
+                <td>
+                    <a href="/delete/{{ task.id }}">Delete</a>
+                    <br>
+                    <a href="/update/{{ task.id }}">Edit</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="POST">
+        <input type="text" id="task-content" name="task-content">
+        <input type="submit" id="submit" name="add task">
+    </form>
+</div>
+
+{% endblock %}
