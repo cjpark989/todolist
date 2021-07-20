@@ -21,8 +21,8 @@ To run this project, install it locally using by clicking the green "clone or do
 * Flask
 * SQLAlchemy 
 ```
-$ pip install Flask
-$ pip install Flask-SQLAlchemy
+$ pip3 install Flask
+$ pip3 install Flask-SQLAlchemy
 ```
 
 
